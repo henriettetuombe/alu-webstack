@@ -32,12 +32,12 @@ defaults
         errorfile 502 /etc/haproxy/errors/502.http
         errorfile 503 /etc/haproxy/errors/503.http
         errorfile 504 /etc/haproxy/errors/504.http
-frontend www.globalblaine.tech
+frontend www.hentuombe.tech
    bind *:80
-   bind *:443 ssl crt /etc/letsencrypt/live/www.globalblaine.tech/www.globalblaine.tech.pem
+   bind *:443 ssl crt /etc/letsencrypt/live/www.hentuombe.tech/fullchain.pem
    default_backend www-backend
 backend www-backend
    mode http
    balance roundrobin
-   server 5744-web-01 54.198.219.222:80 check
-   server 5744-web-02 54.209.172.63:80 check
+   server 5748-web-01 34.207.119.64:80 check
+   server 5748-web-02 54.144.113.6:80 check
